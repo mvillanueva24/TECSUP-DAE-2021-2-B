@@ -12,5 +12,5 @@ urlpatterns = [
     # ex: localhost:8080/app/multiplicar/5/4
     path('multiplicar/<int:num1>/<int:num2>', views.multiplicacion, name='multiplicar'),
     # ex: localhost:8080/app/dividir/10/2
-    path('dividir/<int:num1>/<int:num2>', views.division, name='dividir'),
+    path('dividir/<int:num1>/<int:num2>', views.division,name='dividir'),
 ]
