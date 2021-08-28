@@ -1,5 +1,6 @@
+import math
 from django.shortcuts import render
-
+from math import *
 # Create your views here.
 
 def index(request):
@@ -30,4 +31,18 @@ def enviar(request):
         'operacion' : oper,
     }
     return render(request, 'calculo/resultado.html', context)
-    
+
+def indexCilindro(request):
+    context = {
+        'titulo' : "CÁLCULO DEL VOLUMEN DE UN CILINDRO"
+    }
+    return render(request, 'calculo/cilindro.html', context)
+
+def enviarCilindro(request):
+    h = int(request.POST['altura'])
+    d = int(request.POST['diametro'])
+    rpta = pi * math.pow(d/2, 2) * h
+    context = {
+        'respuesta' : '{:.2f}'.format(rpta)
+    }
+    return render(request, 'calculo/resultadoCilindro.html', context)

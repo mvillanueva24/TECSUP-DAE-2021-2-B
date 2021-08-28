@@ -1,6 +1,7 @@
 <h2>{{ titulo }}</h2>
 <form action=" {% url 'calculo:enviar' %} " method="post">
     {% csrf_token %}
+    <p>Ingrese los dos números</p>
     <input type="number" name="num1"><br>
     <input type="number" name="num2"><br>
 
