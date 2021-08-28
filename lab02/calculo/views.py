@@ -18,9 +18,9 @@ def enviar(request):
         rpta = num1 + num2
     elif oper == 'resta':
         rpta = num1 - num2
-    elif oper == 'multi':
+    elif oper == 'multiplicacion':
         rpta = num1 * num2
-    elif oper == 'divi':
+    elif oper == 'division':
         rpta = num1 / num2
     
     context = {
