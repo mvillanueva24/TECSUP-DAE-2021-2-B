@@ -28,4 +28,4 @@ class Cliente(models.Model):
     fecha_nacimiento = models.DateField("Fecha de Nacimiento")
     pub_date = models.DateTimeField('Fecha Creación')
     def __str__(self):
-        return self.nombre+" "+ self.apellido
+        return self.nombre+ " " + self.apellido
